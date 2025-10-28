@@ -123,7 +123,8 @@ const rooms = [
         roomName: room.name,
         price: room.price,
         paymentRef: reference,
-        date: new Date().toISOString()
+        date: new Date().toISOString(),
+        status: "pending"
       })
       .then(() => {
         alert("Booking confirmed! Check your dashboard for details.");
