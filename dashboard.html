@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dashboard | Coastal Stay</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gray-900/80 backdrop-blur-md shadow-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="index.html" class="text-2xl font-bold text-indigo-400">Coastal Stay</a>
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="rooms.html" class="hover:text-indigo-400">Rooms</a>
+        <a href="contact.html" class="hover:text-indigo-400">Contact</a>
+        <button id="btn-logout" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg text-white font-semibold">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Dashboard Content -->
+  <main class="flex-grow pt-24 flex flex-col items-center justify-center text-center px-6">
+    <h1 class="text-4xl font-bold mb-6">Welcome Back!</h1>
+    <p id="user-email" class="text-gray-400 text-lg mb-8"></p>
+
+    <div class="bg-gray-900/60 p-8 rounded-2xl shadow-2xl max-w-xl w-full">
+      <h2 class="text-2xl mb-4 font-semibold">My Bookings</h2>
+      <p class="text-gray-400">Your upcoming stays will appear here.</p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 py-8 text-center text-sm text-gray-500">
+    © 2025 Coastal Stay. All rights reserved.
+  </footer>
+
+  <!-- Firebase + Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+
+  <script src="js/config.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rooms | Coastal Stay</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-gray-950 text-white overflow-x-hidden">
+  <!-- Header -->
+  <header class="bg-gray-900/80 backdrop-blur-md shadow-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="index.html" class="text-2xl font-bold text-indigo-400">Coastal Stay</a>
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="index.html" class="hover:text-indigo-400">Home</a>
+        <a href="rooms.html" class="text-indigo-400 font-semibold">Rooms</a>
+        <a href="about.html" class="hover:text-indigo-400">About</a>
+        <a href="contact.html" class="hover:text-indigo-400">Contact</a>
+        <a href="dashboard.html" class="hover:text-indigo-400">My Bookings</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Rooms Section -->
+  <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mb-12">Choose Your Perfect Room</h1>
+    <div id="rooms-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+  </main>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+    <div class="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-md p-8 relative text-white">
+      <button id="close-booking" class="absolute top-3 right-3 text-gray-400 hover:text-white">&times;</button>
+      <h2 class="text-2xl font-semibold mb-4">Confirm Your Booking</h2>
+      <p id="room-details" class="text-gray-300 mb-6"></p>
+      <button id="pay-now" class="w-full bg-indigo-600 hover:bg-indigo-500 py-3 rounded-lg font-semibold">
+        Proceed to Payment
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-8 text-center text-sm text-gray-500">
+    © 2025 Coastal Stay. All rights reserved.
+  </footer>
+
+  <!-- Firebase & Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="js/config.js"></script>
+  <script src="./js/rooms.js"></script>
+</body>
+</html>
