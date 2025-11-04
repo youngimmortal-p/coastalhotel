@@ -9,100 +9,158 @@
 </head>
 <body class="bg-gray-950 text-white overflow-x-hidden">
 
-  <!-- Header -->
+  <!-- ✅ Responsive Header -->
   <header id="site-header" class="fixed w-full z-50 backdrop-blur-md bg-gray-900/60 shadow-lg transition-all duration-500">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
       <a href="index.html" class="text-2xl font-bold tracking-wide text-white">Coastal Stay</a>
-      <nav class="flex items-center gap-6 text-sm">
+
+      <!-- Mobile menu button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav id="desktop-nav" class="hidden md:flex items-center gap-6 text-sm">
         <a href="index.html" class="text-indigo-400 font-medium">Home</a>
         <a href="rooms.html" class="hover:text-indigo-400 transition">Rooms</a>
         <a href="about.html" class="hover:text-indigo-400 transition">About</a>
         <a href="contact.html" class="hover:text-indigo-400 transition">Contact</a>
         <a href="dashboard.html" class="hover:text-indigo-400 transition">My Bookings</a>
 
-        <button id="btn-login" class="bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-lg text-white font-semibold">Login</button>
-  <button id="btn-logout" class="hidden bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg text-white font-semibold">Logout</button>
+        <button id="btn-login" class="bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-lg text-white font-semibold">
+          Login
+        </button>
+        <button id="btn-logout" class="hidden bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg text-white font-semibold">
+          Logout
+        </button>
       </nav>
     </div>
+
+    <!-- ✅ Mobile Dropdown Nav -->
+    <nav id="mobile-nav" class="md:hidden hidden flex flex-col items-center bg-gray-900/90 backdrop-blur-md py-4 space-y-4">
+      <a href="index.html" class="text-indigo-400 font-medium">Home</a>
+      <a href="rooms.html" class="hover:text-indigo-400 transition">Rooms</a>
+      <a href="about.html" class="hover:text-indigo-400 transition">About</a>
+      <a href="contact.html" class="hover:text-indigo-400 transition">Contact</a>
+      <a href="dashboard.html" class="hover:text-indigo-400 transition">My Bookings</a>
+
+      <button id="btn-login-mobile" class="bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-lg text-white font-semibold">
+        Login
+      </button>
+      <button id="btn-logout-mobile" class="hidden bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg text-white font-semibold">
+        Logout
+      </button>
+    </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="h-screen flex flex-col justify-center items-center relative">
-    <img src="assets/img/hero.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
+  <!-- ✅ Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center relative text-center px-4 sm:px-6">
+    <img src="./hero.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60">
     <div class="absolute inset-0 bg-gradient-to-b from-gray-900/70 to-black/80"></div>
 
-    <div class="relative z-10 text-center px-6">
-      <h1 class="text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+    <div class="relative z-10">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
         A Seaside Escape in Style
       </h1>
-      <p class="text-lg text-gray-300 max-w-xl mx-auto mb-8">
+      <p class="text-base sm:text-lg text-gray-300 max-w-md sm:max-w-xl mx-auto mb-8">
         Discover breathtaking views, world-class comfort, and unforgettable memories.
       </p>
-      <a href="rooms.html" class="px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-2xl transform hover:scale-105 transition">
+      <a href="rooms.html" class="px-6 sm:px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-2xl transform hover:scale-105 transition">
         Explore Rooms
       </a>
     </div>
   </section>
 
-  <!-- Highlights -->
+  <!-- ✅ Highlights -->
   <section class="py-20 bg-gradient-to-b from-gray-900 to-gray-950 text-center">
-    <h2 class="text-3xl font-semibold mb-10">Why Stay With Us?</h2>
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
-      <div class="glass-card">
-        <h3 class="text-xl font-semibold mb-2">Oceanfront Luxury</h3>
-        <p class="text-gray-400">Wake up to the sound of waves in beautifully designed suites.</p>
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-10">Why Stay With Us?</h2>
+  
+    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+      <!-- 🌊 Oceanfront Luxury -->
+      <div class="glass-card p-6 rounded-2xl hover:scale-[1.02] transition transform duration-300 shadow-xl hover:shadow-indigo-700/30 bg-gray-900/50 backdrop-blur-md border border-gray-800">
+        <div class="overflow-hidden rounded-xl mb-4 relative group">
+          <img 
+            src="./oceanfront.jpg" 
+            alt="Oceanfront Luxury" 
+            class="w-full h-56 sm:h-64 object-cover rounded-xl transform group-hover:scale-110 transition duration-500 ease-out shadow-lg group-hover:shadow-2xl group-hover:brightness-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        </div>
+        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-indigo-400">Oceanfront Luxury</h3>
+        <p class="text-gray-400 text-sm sm:text-base">Wake up to the sound of waves in beautifully designed suites.</p>
       </div>
-      <div class="glass-card">
-        <h3 class="text-xl font-semibold mb-2">Fine Dining</h3>
-        <p class="text-gray-400">Taste gourmet dishes curated by award-winning chefs.</p>
+  
+      <!-- 🍽 Fine Dining -->
+      <div class="glass-card p-6 rounded-2xl hover:scale-[1.02] transition transform duration-300 shadow-xl hover:shadow-indigo-700/30 bg-gray-900/50 backdrop-blur-md border border-gray-800">
+        <div class="overflow-hidden rounded-xl mb-4 relative group">
+          <img 
+            src="./finedining.jpg" 
+            alt="Fine Dining" 
+            class="w-full h-56 sm:h-64 object-cover rounded-xl transform group-hover:scale-110 transition duration-500 ease-out shadow-lg group-hover:shadow-2xl group-hover:brightness-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        </div>
+        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-indigo-400">Fine Dining</h3>
+        <p class="text-gray-400 text-sm sm:text-base">Taste gourmet dishes curated by award-winning chefs.</p>
       </div>
-      <div class="glass-card">
-        <h3 class="text-xl font-semibold mb-2">Wellness Spa</h3>
-        <p class="text-gray-400">Relax and rejuvenate with premium spa and wellness treatments.</p>
+  
+      <!-- 💆 Wellness Spa -->
+      <div class="glass-card p-6 rounded-2xl hover:scale-[1.02] transition transform duration-300 shadow-xl hover:shadow-indigo-700/30 bg-gray-900/50 backdrop-blur-md border border-gray-800">
+        <div class="overflow-hidden rounded-xl mb-4 relative group">
+          <img 
+            src="./spa.jpg" 
+            alt="Wellness Spa" 
+            class="w-full h-56 sm:h-64 object-cover rounded-xl transform group-hover:scale-110 transition duration-500 ease-out shadow-lg group-hover:shadow-2xl group-hover:brightness-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        </div>
+        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-indigo-400">Wellness Spa</h3>
+        <p class="text-gray-400 text-sm sm:text-base">Relax and rejuvenate with premium spa and wellness treatments.</p>
       </div>
     </div>
   </section>
+  
 
   <!-- 🔒 Auth Modal -->
-<div id="auth-modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[100]">
+  <div id="auth-modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[100] px-4">
     <div class="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-md p-8 relative text-white">
-      <button id="close-auth" class="absolute top-3 right-3 text-gray-400 hover:text-white">&times;</button>
-      
+      <button id="close-auth" class="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl">&times;</button>
       <h2 id="auth-title" class="text-2xl font-semibold mb-6 text-center">Login</h2>
-  
+
       <form id="auth-form" class="flex flex-col gap-4">
         <input id="email" type="email" placeholder="Email" required class="p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
         <input id="password" type="password" placeholder="Password" required class="p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-  
-        <button id="auth-submit" type="submit" class="bg-indigo-600 hover:bg-indigo-500 p-3 rounded font-semibold transition">
-          Login
-        </button>
-  
+        <button id="auth-submit" type="submit" class="bg-indigo-600 hover:bg-indigo-500 p-3 rounded font-semibold transition">Login</button>
         <p class="text-center text-sm text-gray-400">
           <span id="toggle-auth" class="text-indigo-400 hover:underline cursor-pointer">Create an account</span>
         </p>
       </form>
     </div>
   </div>
-  
+
+  <!-- Footer -->
   <footer class="bg-gray-900 py-8 text-center text-sm text-gray-500">
     © 2025 Coastal Stay. All rights reserved.
   </footer>
 
-  <!-- Firebase Compat SDKs -->
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 
- 
   <script src="js/config.js"></script>
-  
- 
   <script src="js/auth.js"></script>
-  
- 
   <script src="js/main.js"></script>
 
-  
+  <!-- ✅ Mobile Menu Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>

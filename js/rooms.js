@@ -15,35 +15,35 @@ const rooms = [
       name: 'Sea View Suite',
       desc: 'Panoramic ocean views, king bed, and private balcony.',
       price: 35000,
-      img: 'assets/img/room1.jpg'
+      img: '../seasideview.jpg'
     },
     {
       id: 'r2',
       name: 'Garden Deluxe',
       desc: 'Peaceful garden setting with queen bed and minimalist design.',
       price: 25000,
-      img: 'assets/img/room2.jpg'
+      img: '../gardendelux.jpg'
     },
     {
       id: 'r3',
       name: 'Presidential Suite',
       desc: 'Luxury suite with jacuzzi, private bar, and butler service.',
       price: 55000,
-      img: 'assets/img/room3.jpg'
+      img: '../presidentialsuite.jpg'
     },
     {
       id: 'r4',
       name: 'Executive Room',
       desc: 'Business-class comfort with workspace and city view.',
       price: 28000,
-      img: 'assets/img/room4.jpg'
+      img: '../executive.jpg'
     },
     {
       id: 'r5',
       name: 'Family Villa',
       desc: 'Spacious 2-bedroom suite for the whole family, kitchenette included.',
       price: 40000,
-      img: 'assets/img/room5.jpg'
+      img: '../family.jpg'
     }
   ];
   
